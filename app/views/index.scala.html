@@ -1,0 +1,32 @@
+@(shortUrl: String, originalUrlForm: Form[String], tinyUrlForm: Form[String])
+
+@import helper._
+
+@main("TinyUrl") {
+
+    <h1>Original URL</h1>
+
+    @form(routes.Application.tinyUrl) {
+
+        Input original url: <input type="text" name="originalUrl" >
+        <input type="submit" value="Create">
+
+    }
+
+
+    <h1>Tiny URL</h1>
+
+    <h5>@shortUrl</h5>
+
+
+    <h1>Browse Tiny URL</h1>
+
+    @form(routes.Application.redirect) {
+
+        Input tiny url: <input type="text" name="tinyUrl" >
+        <input type="submit" value="Browse">
+
+    }
+
+
+}

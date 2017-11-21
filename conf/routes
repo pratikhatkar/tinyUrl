@@ -1,0 +1,4 @@
+GET     /                          controllers.Application.index
+
+POST    /tinyUrl                   controllers.Application.tinyUrl
+POST    /redirect                  controllers.Application.redirect

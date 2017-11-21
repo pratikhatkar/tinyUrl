@@ -1,0 +1,38 @@
+Tiny Url
+--------
+
+
+Prerequisites and assumptions:
+------------------------------
+
+1. Working Play framework installation.
+2. In memory database using H2. Each time you launch TinyUrl application, a new in memory database is created.
+
+
+Project creation and launch:
+----------------------------
+
+1. Unzip project.
+2. In project folder /tinyUrl, on command line type 'play'.
+3. Type 'compile' to compile the project.
+4. Type 'test' to execute all tests.
+5. Type 'run' to launch project.
+6. Visit 'http://localhost:9000/' on browser.
+7. Click 'Apply this script now!' to apply database schema patch.
+8. TinyUrl is ready to be used.
+
+
+Approach:
+---------
+
+1. Simple UI to take two inputs. One input takes the original url and return the tiny url. Second input takes the tiny
+   url and redirect page to original url.
+2. For an original url, if tiny url is created return the created tiny url. If not, create a new one.
+3. This application uses in memory database H2, but can easily be replaced by MySql or Cassandra instance.
+4. For every new original url, internally application generates id and associate the original url with id.
+   This id is nothing but the new tiny url.
+
+
+
+
+
